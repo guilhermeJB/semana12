@@ -10,17 +10,6 @@ public class BidirectionalHashMap<K, V> {
 	private HashMap<K, V> hmOne;
 	private HashMap<V, K> hmTwo;
 
-	/**
-	 * construtor
-	 */
-//	public BidirectionalHashMap(K key, V value) {
-//		hmOne = new HashMap<K, V>();
-//		hmOne.put(key, value);
-//		hmTwo = new HashMap<V, K>();
-//		hmTwo.put(value, key);
-//		this.numKeys = 1;
-//	}
-
 	public BidirectionalHashMap() {
 		hmOne = new HashMap<K, V>();
 		hmTwo = new HashMap<V, K>();
@@ -72,7 +61,7 @@ public class BidirectionalHashMap<K, V> {
 	 * @return true se contem o valor, false caso contrario.
 	 */
 	public boolean containsValue(V value){
-		return hmOne.containsValue(value);
+		return hmTwo.containsKey(value);
 	}
 
 	/**
